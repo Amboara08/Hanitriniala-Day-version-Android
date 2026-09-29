@@ -1,4 +1,4 @@
-package com.hanitriala.day;
+package com.hanitriniala.day;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -51,7 +51,7 @@ public final class ReminderScheduler {
     alarm.cancel(pending);pending.cancel();
   }
 
-  public static void test(Context context){ReminderReceiver.show(context,"Hanitriala Day","La notification de rappel fonctionne correctement.");}
+  public static void test(Context context){ReminderReceiver.show(context,"Hantriniala Day","La notification de rappel fonctionne correctement.");}
 
   private static int calculateCycleLength(PeriodStore store,ArrayList<PeriodStore.Period> periods){
     ArrayList<PeriodStore.Period> ordered=new ArrayList<PeriodStore.Period>(periods);

@@ -1,4 +1,4 @@
-package com.hanitriala.day;
+package com.hanitriniala.day;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

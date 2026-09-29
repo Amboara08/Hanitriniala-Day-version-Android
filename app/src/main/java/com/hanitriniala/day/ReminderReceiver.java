@@ -1,4 +1,4 @@
-package com.hanitriala.day;
+package com.hanitriniala.day;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -11,13 +11,13 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 public class ReminderReceiver extends BroadcastReceiver {
-  private static final String CHANNEL_ID="hanitriala_cycle_reminders";
+  private static final String CHANNEL_ID="hanitriniala_cycle_reminders";
   private static final int NOTIFICATION_ID=2106;
 
   @Override public void onReceive(Context context,Intent intent){
     int days=intent.getIntExtra("days_before",2);
-    String message=days==0?"Tes règles sont estimées aujourd’hui.":days==1?"Tes règles sont estimées dans environ 1 jour.":"Tes règles sont estimées dans environ "+days+" jours.";
-    show(context,"Hanitriala Day",message+" Pense à te préparer.");
+    String message=days==0?"Les règles sont estimées pour aujourd’hui.":days==1?"Les règles sont estimées pour demain.":"Les règles sont estimées dans "+days+" jours.";
+    show(context,"Hantriniala Day",message+" Pense à te préparer.");
     ReminderScheduler.schedule(context);
   }
 
@@ -38,7 +38,7 @@ public class ReminderReceiver extends BroadcastReceiver {
       NotificationManager manager=(NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
       Class<?> channelClass=Class.forName("android.app.NotificationChannel");
       Constructor<?> constructor=channelClass.getConstructor(String.class,CharSequence.class,int.class);
-      Object channel=constructor.newInstance(CHANNEL_ID,"Rappels du cycle",Integer.valueOf(4));
+      Object channel=constructor.newInstance(CHANNEL_ID,"Rappels Hantriniala Day",Integer.valueOf(4));
       try{Method description=channelClass.getMethod("setDescription",String.class);description.invoke(channel,"Rappels des prochaines règles estimées");}catch(Exception ignored){}
       Method createChannel=manager.getClass().getMethod("createNotificationChannel",channelClass);
       createChannel.invoke(manager,channel);

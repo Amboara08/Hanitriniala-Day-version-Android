@@ -1,4 +1,4 @@
-package com.hanitriala.day;
+package com.hanitriniala.day;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -18,7 +18,7 @@ public final class PeriodStore {
     }
   }
   private final SharedPreferences prefs;
-  public PeriodStore(Context context){ prefs=context.getSharedPreferences("hanitriala.local.v2",Context.MODE_PRIVATE); }
+  public PeriodStore(Context context){ prefs=context.getSharedPreferences("hanitriniala.local.v2",Context.MODE_PRIVATE); }
   public ArrayList<Period> all(){
     ArrayList<Period> result=new ArrayList<Period>();
     try{

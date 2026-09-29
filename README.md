@@ -1,4 +1,23 @@
-# Hanitriala Day — version 7
+# Hantriniala Day — version 8
+
+Application Android locale de suivi du cycle menstruel.
+
+- Nom visible et package harmonisés avec « Hantriniala Day ».
+- Accueil moderne avec en-tête rouge, séparation courbée et aperçu du cycle.
+- Icônes vectorielles dessinées directement par l’application.
+- Calendrier, rapports, historique, rappels et protection par code PIN.
+
+## Générer l’APK
+
+Avec Java 8 et Gradle 2.2.1 :
+
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-8.0.504.1-hotspot"
+$env:Path = "$env:JAVA_HOME\bin;$env:Path"
+& "C:\Gradle\gradle-2.2.1\bin\gradle.bat" clean assembleDebug
+```
+
+L’APK est créé dans `app\build\outputs\apk\app-debug.apk`.
 
 Application Android native en Java, compatible avec l'environnement déjà utilisé : Java 8, Gradle 2.2.1 et Android API 22.
 
